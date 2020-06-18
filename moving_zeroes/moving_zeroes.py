@@ -4,9 +4,18 @@ Returns: a List of integers
 '''
 def moving_zeroes(arr):
     # Your code here
+    checkingArray = []
+    zero_counter = 0
+    for i in range(len(arr)):
+        if arr[i] != 0:                    
+            checkingArray.append(arr[i])
+        else:                             
+            zero_counter += 1
 
-    pass
-
+    while zero_counter > 0:
+        checkingArray.append(0)
+        zero_counter -= 1
+    return checkingArray
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation

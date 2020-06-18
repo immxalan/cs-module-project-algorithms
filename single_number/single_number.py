@@ -4,8 +4,13 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    checkingArray = []
+    for i in arr:                    
+        if i in checkingArray:         
+            checkingArray.remove(i)   
+        else:
+            checkingArray.append(i) 
+    return checkingArray[0] 
 
 
 if __name__ == '__main__':
